@@ -1,0 +1,11 @@
+# Ignoruj folder Git (nie chcemy historii wersji w kontenerze)
+.git
+
+# Ignoruj pliki tymczasowe VS Code
+.vscode
+
+# Ignoruj plik identyfikatora strefy, który utworzył Windows (ten dziwny plik)
+favicon.png:Zone.Identifier
+
+# Ignoruj folder z konfiguracją GitHub Actions
+.github

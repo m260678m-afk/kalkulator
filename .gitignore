@@ -1,0 +1,11 @@
+# Ignoruj pliki systemowe Windows
+favicon.png:Zone.Identifier
+ikona_favicon.png:Zone.Identifier
+
+# Ignoruj folder VS Code (jeśli nie chcesz go na GitHubie)
+.vscode/
+
+# Ignoruj pliki tymczasowe lub generowane
+*.tmp
+*.log
+txt.txt
