@@ -1,0 +1,28 @@
+name: Build and Push Docker Tag
+
+on:
+  push:
+    tags:
+      - 'ver.*' # Uruchom tylko wtedy, gdy tag zaczyna się od litery 'ver.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        # Uzywa nazwy taga git jako taga obrazu dockera (np. m260678m-afk/kalkulator:v1.0.0)
+        tags: m260678m-afk/kalkulator:${{ github.ref_name }}
