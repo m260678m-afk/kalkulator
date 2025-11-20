@@ -1,15 +1,15 @@
-# Kalkulator Projekt
+# Calculator Project
 
-Prosty kalkulator stworzony w ramach nauki Git, VS Code i Dockera.
+A simple calculator created as part of learning Git, VS Code, and Docker.
 
-### Użyte technologie:
+### Technologies used:
 * HTML
 * CSS
 * JavaScript
 
-### Jak uruchomić:
-Otwórz plik index.html w przeglądarce internetowej
+### How to run:
+Open the index.html file in your web browser
 
-### Przyszłość
+### Future
 
-będę nad projektem pracował i starał sie dołożyć wiecej funkcjonalności
+I will work on the project and try to add more functionalities.
