@@ -10,6 +10,6 @@ Prosty kalkulator stworzony w ramach nauki Git, VS Code i Dockera.
 ### Jak uruchomić:
 Otwórz plik index.html w przeglądarce internetowej
 
-### przyszłość
+### Przyszłość
 
 będę nad projektem pracował i starał sie dołożyć wiecej funkcjonalności
