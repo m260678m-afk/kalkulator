@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Kontenerowy</title>
-    <!-- Dodaj tę linię, wskazując poprawną nazwę pliku -->
-    <!--link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Jeśli używasz pliku PNG, użyj tego: -->
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Upewnij się, że plik style.css jest w tym samym folderze -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="calculator">
-        <h2>Prosty Kalkulator</h2>
-        <input type="number" id="num1" placeholder="Liczba 1">
-        <select id="operator">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <input type="number" id="num2" placeholder="Liczba 2">
-        <button onclick="calculate()">Oblicz</button>
-        <p id="result">Wynik: </p>
+<body id="theme-root"> <!-- Dodałem ID 'theme-root' tutaj -->
+    <div class="main-wrapper">
+        <header>
+            <h2>Prosty Kalkulator</h2>
+            <!-- Przycisk do zmiany motywu -->
+            <button onclick="toggleTheme()">Zmień Motyw</button>
+        </header>
+
+        <div class="calculator">
+            <input type="number" id="num1" placeholder="Liczba 1">
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="number" id="num2" placeholder="Liczba 2">
+            <button onclick="calculate()">Oblicz</button>
+            <p id="result">Wynik: </p>
+        </div>
     </div>
     <!-- Upewnij się, że plik script.js jest w tym samym folderze -->
     <script src="script.js"></script>

@@ -1,3 +1,4 @@
+/* --- DOMYŚLNY MOTYW (JASNY) --- */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,15 +6,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    /* Domyślne kolory */
     background-color: #f4f4f4;
+    color: #333; 
+    /* Dodajemy płynne przejście kolorów przy zmianie motywu */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .calculator {
+    /* Domyślne kolory */
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
+    /* Dodajemy płynne przejście */
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 input, select, button {
@@ -21,6 +29,8 @@ input, select, button {
     margin: 5px;
     width: 80%;
     box-sizing: border-box;
+    /* Dodajemy płynne przejście */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 button {
@@ -37,5 +47,37 @@ button:hover {
 #result {
     margin-top: 15px;
     font-weight: bold;
+    /* Domyślny kolor */
     color: #333;
+}
+
+/* --- STYLE DLA MOTYWU CIEMNEGO --- */
+/* Te style aktywują się, gdy <body> ma klasę .dark-mode */
+
+body.dark-mode {
+    background-color: #121212; /* Bardzo ciemne tło */
+    color: #eee; /* Jasny tekst */
+}
+
+.dark-mode .calculator {
+    background: #1e1e1e; /* Ciemniejszy kontener kalkulatora */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Jasny cień */
+}
+
+.dark-mode input, .dark-mode select, .dark-mode button {
+    background-color: #333; /* Ciemne tło dla pól input */
+    color: #eee;
+    border-color: #555;
+}
+
+.dark-mode button {
+    background-color: #0056b3; /* Ciemniejszy niebieski dla przycisku */
+}
+
+.dark-mode button:hover {
+    background-color: #003f8c;
+}
+
+.dark-mode #result {
+    color: #00BFFF; /* Jaskrawy kolor wyniku w ciemnym trybie */
 }
