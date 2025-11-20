@@ -1,77 +1,105 @@
 /* --- DOMYŚLNY MOTYW (JASNY) --- */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    /* Domyślne kolory */
-    background-color: #f4f4f4;
+    padding-top: 50px; 
+    background-color: #c8c4c4;
     color: #333; 
-    /* Dodajemy płynne przejście kolorów przy zmianie motywu */
     transition: background-color 0.3s, color 0.3s;
 }
 
+h1 {
+    color: #333;
+    margin-top: 0; 
+    margin-bottom: 25px; 
+    font-size: 1.5em;
+    /* DODANA LINIA: Wymusza centrowanie tekstu wewnątrz h1 */
+    text-align: center; 
+}
+
+
 .calculator {
-    /* Domyślne kolory */
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
-    /* Dodajemy płynne przejście */
+    width: 350px; /* Zwiększyłem szerokość kontenera, żeby przyciski 50% miały sensowny rozmiar */
     transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-input, select, button {
-    padding: 10px;
-    margin: 5px;
-    width: 80%;
-    box-sizing: border-box;
-    /* Dodajemy płynne przejście */
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
+/* Style ogólne dla wszystkich przycisków */
 button {
+    display: block; 
+    padding: 10px;
+    width: 15%; /* Ustawienie szerokości na 15% */
+    box-sizing: border-box; 
+    margin-bottom: 35px; 
+    /* Automatyczne centrowanie przycisku, gdy width jest mniejsze niż 100% */
+    margin-left: auto; 
+    margin-right: auto; 
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+    /* Konkretne kolory dla przycisku w trybie jasnym */
     background-color: #007BFF;
     color: white;
     border: none;
     cursor: pointer;
 }
 
+/* Styl po najechaniu myszką */
 button:hover {
     background-color: #0056b3;
 }
 
+/* Style dla inputów i selecta (niezmienione, nadal 100% szerokości) */
+input, select {
+    display: block; 
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box;
+    margin-bottom: 15px; 
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
 #result {
-    margin-top: 15px;
+    margin-top: 20px; 
     font-weight: bold;
-    /* Domyślny kolor */
     color: #333;
 }
 
 /* --- STYLE DLA MOTYWU CIEMNEGO --- */
-/* Te style aktywują się, gdy <body> ma klasę .dark-mode */
-
 body.dark-mode {
-    background-color: #121212; /* Bardzo ciemne tło */
-    color: #eee; /* Jasny tekst */
+    background-color: #121212; 
+    color: #eee; 
+}
+
+.dark-mode h1 {
+    color: #A0A0A0; 
 }
 
 .dark-mode .calculator {
-    background: #1e1e1e; /* Ciemniejszy kontener kalkulatora */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Jasny cień */
+    background: #1e1e1e; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
 }
 
 .dark-mode input, .dark-mode select, .dark-mode button {
-    background-color: #333; /* Ciemne tło dla pól input */
+    background-color: #333; 
     color: #eee;
     border-color: #555;
 }
 
 .dark-mode button {
-    background-color: #0056b3; /* Ciemniejszy niebieski dla przycisku */
+    background-color: #0056b3; 
 }
 
 .dark-mode button:hover {
@@ -79,5 +107,5 @@ body.dark-mode {
 }
 
 .dark-mode #result {
-    color: #00BFFF; /* Jaskrawy kolor wyniku w ciemnym trybie */
+    color: #00BFFF; 
 }
