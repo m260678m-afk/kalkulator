@@ -15,6 +15,13 @@ jobs:
       # Zaktualizowano z v2 do v4 (najnowsza stabilna wersja)
       uses: actions/checkout@v4 
 
+    # --- POCZĄTEK NOWEGO BLOKU ---
+    - name: Install dependencies and Run tests
+      run: |
+        npm install
+        npm test
+    # --- KONIEC NOWEGO BLOKU ---
+
     - name: Login to Docker Hub
       # Ta akcja jest aktualna
       uses: docker/login-action@v1
