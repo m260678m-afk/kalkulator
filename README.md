@@ -1,14 +1,15 @@
-# Calculator Project
+### Project: Container Calculator (HTML/CSS/JS)
 
-A simple calculator created as part of learning Git, VS Code, and Docker.
+A simple front-end calculator that can be run locally using a Docker container with a lightweight Nginx server.
 
-### Technologies used:
-* HTML
-* CSS
-* JavaScript
+### Prerequisites
 
-### How to run:
-Open the index.html file in your web browser
+To run this project, you must have **Docker** installed on your computer.
+
+You can check if Docker is installed by running the following command in the terminal:
+
+```bash
+docker --version
 
 ### Future
 
