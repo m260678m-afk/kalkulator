@@ -10,7 +10,7 @@ You can check if Docker is installed by running the following command in the ter
 
 ```bash
 docker --version
-
+```
 ### Future
 
 I will work on the project and try to add more functionalities.
